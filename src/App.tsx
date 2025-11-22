@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "./components/Hero";
 import Catalog from "./components/Catalog";
 import ContactCTA from "./components/ContactCTA";
-import Footer from "./Footer";
+import Footer from "./components/Footer";
 import useReveal from "./hooks/useReveal";
 
 const App: React.FC = () => {
