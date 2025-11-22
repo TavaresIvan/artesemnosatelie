@@ -12,45 +12,52 @@ interface Item {
 const ITEMS: Item[] = [
   {
     id: 1,
-    title: "Painel Macramé P",
-    price: "R$ 120",
-    img: "https://images.unsplash.com/photo-1619808799783-db68de98fbe0?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    size: "20 cm",
+    title: "Pingente Anjo",
+    price: "R$ 40",
+    img: "/images/anjobranco.jpeg",
+    size: "30 cm",
   },
   {
     id: 2,
-    title: "Suporte para Plantas",
-    price: "R$ 80",
-    img: "https://plus.unsplash.com/premium_photo-1661757739361-b05e5a077ed0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    size: "20 cm",
+    title: "Pingente Anjo",
+    price: "R$ 40",
+    img: "/images/anjomostarda.jpeg",
+    size: "30 cm",
   },
   {
     id: 3,
-    title: "Cortina Macramé",
-    price: "R$ 240",
-    img: "https://images.unsplash.com/photo-1631945788919-24e76faead25?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    size: "20 cm",
+    title: "Enfeite bola",
+    price: "R$ 15",
+    img: "/images/bolas.jpeg",
+    size: "70 mm",
   },
   {
     id: 4,
-    title: "Manta Decorativa (Lã)",
-    price: "R$ 180",
-    img: "https://images.unsplash.com/photo-1610428011552-734764c290ee?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Pingente Papai Noel com Gizo",
+    price: "R$ 10",
+    img: "/images/papainoelvermelho.jpeg",
     size: "20 cm",
   },
   {
     id: 5,
-    title: "Cesto de Fios",
-    price: "R$ 95",
-    img: "https://images.unsplash.com/photo-1610428011552-734764c290ee?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Pingente Papai Noel com Gizo",
+    price: "R$ 10",
+    img: "/images/papainoelmostarda.jpeg",
     size: "20 cm",
   },
   {
     id: 6,
-    title: "Detalhe de Parede",
-    price: "R$ 75",
-    img: "https://images.unsplash.com/photo-1610428011552-734764c290ee?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    size: "20 cm",
+    title: "Pigente bola de macramê",
+    price: "R$ 5",
+    img: "/images/arcos.jpeg",
+    size: "8 cm",
+  },
+  {
+    id: 7,
+    title: "Pigente mini árvores",
+    price: "R$ 2.50",
+    img: "/images/enfeitearvore.jpeg",
+    size: "15 cm",
   },
 ];
 
@@ -92,7 +99,7 @@ const Catalog: React.FC = () => {
               <div className="ml-auto">
                 <a
                   className="btn-secondary whitespace-nowrap"
-                  href={`https://api.whatsapp.com/send?phone=55YOURNUMBER&text=${encodeURIComponent(
+                  href={`https://api.whatsapp.com/send?phone=5561998539400&text=${encodeURIComponent(
                     `Olá! Gostaria de mais informações sobre: ${it.title}`
                   )}`}
                   target="_blank"
