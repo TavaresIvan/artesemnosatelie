@@ -1,11 +1,24 @@
+/* src/components/Footer.tsx */
 import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="mt-24 py-10 bg-white border-t">
-      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-0 text-center text-sm text-gray-500">
-        <p>© {new Date().getFullYear()} Artes em Nós — Todos os direitos reservados.</p>
-        <p className="mt-2">Feito com ❤️ — Entre em contato: <a href="mailto:contato@artesernos.com" className="underline">contato@artesernos.com</a></p>
+    <footer className="mt-32 py-12 bg-white border-t border-gray-100">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-0 text-center text-sm text-gray-500">
+        <p className="font-medium text-gray-700">Artes em Nós</p>
+        <p className="mt-1">
+          © {new Date().getFullYear()} — Todos os direitos reservados. Design
+          atemporal.
+        </p>
+        <p className="mt-3">
+          Feito com ❤️ — Entre em contato:{" "}
+          <a
+            href="mailto:contato@artesernos.com"
+            className="underline hover:text-gray-900 transition"
+          >
+            contato@artesernos.com
+          </a>
+        </p>
       </div>
     </footer>
   );
