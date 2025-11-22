@@ -1,31 +1,38 @@
+/* src/App.tsx */
 import React from "react";
 import Hero from "./components/Hero";
 import Catalog from "./components/Catalog";
 import ContactCTA from "./components/ContactCTA";
 import Footer from "./components/Footer";
-import useReveal from "./hooks/useReveal";
+import useReveal from "./hooks/useReveal"; // useReveal.ts
 
 const App: React.FC = () => {
-  useReveal();
+  useReveal(); // Garante que a lógica de revelação é ativada
 
   return (
-    <div className="min-h-screen text-gray-800 bg-white">
+    // Alterado para um fundo mais suave e menos duro que o 'bg-white' puro
+    <div className="min-h-screen text-gray-800 bg-gray-50/70">
       <Hero />
 
-      <main className="max-w-6xl mx-auto px-6 md:px-8 lg:px-0">
-        <section className="mt-20 reveal">
+      <main className="max-w-7xl mx-auto px-6 md:px-8 lg:px-0">
+        <section className="mt-24 reveal">
+          {" "}
+          {/* Aumentei o espaçamento */}
           <Catalog />
         </section>
 
-        <section className="mt-20 mb-16 reveal">
+        <section className="mt-32 mb-20 reveal">
+          {" "}
+          {/* Aumentei o espaçamento */}
           <ContactCTA />
         </section>
       </main>
 
       <Footer />
 
+      {/* WhatsApp FAB (Flutuante) */}
       <a
-        className="whatsapp-fab"
+        className="whatsapp-fab transition-transform duration-300 hover:scale-105"
         href={`https://api.whatsapp.com/send?phone=55YOURNUMBER&text=${encodeURIComponent(
           "Olá! Vi seu catálogo e quero saber mais sobre as peças."
         )}`}
@@ -33,11 +40,12 @@ const App: React.FC = () => {
         rel="noreferrer"
         aria-label="Contato por WhatsApp"
       >
-        <div className="btn-primary p-4 rounded-full">
+        {/* Usando o btn-primary no estilo flutuante */}
+        <div className="btn-primary p-4 rounded-full shadow-2xl">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="22"
-            height="22"
+            width="24"
+            height="24"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
