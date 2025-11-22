@@ -10,7 +10,6 @@ interface Item {
 }
 
 const ITEMS: Item[] = [
-  // URLs de exemplo foram mantidas.
   {
     id: 1,
     title: "Painel Macramé P",
@@ -83,7 +82,7 @@ const Catalog: React.FC = () => {
             <div className="p-5 flex items-start justify-between gap-4">
               <div>
                 <h4 className="font-bold text-lg text-gray-900">{it.title}</h4>
-                {/* INFORMAÇÃO DE TAMANHO: Discreto e Secundário */}
+                {/* Informação de tamanho */}
                 <p className="text-sm text-gray-500 mt-1">Tamanho: {it.size}</p>
                 {/* Preço (Cor de destaque) */}
                 <p className="text-base text-amber-700 font-semibold mt-1">
@@ -99,7 +98,7 @@ const Catalog: React.FC = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {/* Ícone do WhatsApp: Agora alinhado pelo btn-secondary */}
+                  {/* Ícone do WhatsApp alinhado pelo btn-secondary */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -123,7 +122,7 @@ const Catalog: React.FC = () => {
                     />{" "}
                     {/* Ícone do WhatsApp branco */}
                   </svg>
-                  <span>Conversar</span> {/* O texto está DENTRO do botão */}
+                  <span>Conversar</span>
                 </a>
               </div>
             </div>
