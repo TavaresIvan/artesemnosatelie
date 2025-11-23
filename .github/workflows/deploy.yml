@@ -1,0 +1,42 @@
+# .github/workflows/deploy.yml
+
+name: Deploy to GitHub Pages
+
+on:
+  # Dispara o workflow sempre que houver um push para a branch 'main'
+  push:
+    branches:
+      - main 
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Checkout: Clona o repositório
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. Setup Node: Configura o ambiente Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Use uma versão LTS recente
+
+      # 3. Install Dependencies: Instala as dependências do package.json
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Build: Roda o script de build do Vite (cria a pasta /dist)
+      - name: Build
+        run: npm run build
+
+      # 5. Deploy: Publica o conteúdo da pasta /dist no GitHub Pages
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          # O token usado para autorizar o deploy
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # O diretório que deve ser publicado (a pasta gerada pelo 'npm run build')
+          publish_dir: ./dist
+          # Publica na branch 'gh-pages', que é onde o GitHub Pages lê o conteúdo.
+          publish_branch: gh-pages
