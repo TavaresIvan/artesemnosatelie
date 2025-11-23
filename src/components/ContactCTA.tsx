@@ -1,4 +1,3 @@
-/* src/components/ContactCTA.tsx */
 import React from "react";
 
 const ContactCTA: React.FC = () => {

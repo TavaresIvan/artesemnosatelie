@@ -1,29 +1,25 @@
-/* src/App.tsx */
 import React from "react";
 import Hero from "./components/Hero";
 import Catalog from "./components/Catalog";
 import ContactCTA from "./components/ContactCTA";
 import Footer from "./components/Footer";
-import useReveal from "./hooks/useReveal"; // useReveal.ts
+import useReveal from "./hooks/useReveal";
 
 const App: React.FC = () => {
-  useReveal(); // Garante que a lógica de revelação é ativada
+  useReveal();
 
   return (
-    // Alterado para um fundo mais suave e menos duro que o 'bg-white' puro
     <div className="min-h-screen text-gray-800 bg-gray-50/70">
       <Hero />
 
       <main className="max-w-7xl mx-auto px-6 md:px-8 lg:px-0">
         <section className="mt-24 reveal">
           {" "}
-          {/* Aumentei o espaçamento */}
           <Catalog />
         </section>
 
         <section className="mt-32 mb-20 reveal">
           {" "}
-          {/* Aumentei o espaçamento */}
           <ContactCTA />
         </section>
       </main>

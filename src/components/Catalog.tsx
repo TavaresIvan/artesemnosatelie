@@ -1,6 +1,5 @@
-/* src/components/Catalog.tsx */
 import React, { useState } from "react";
-import ImageModal from "./ImageModal"; // Importe o novo componente
+import ImageModal from "./ImageModal";
 
 interface Item {
   id: number;
@@ -123,7 +122,6 @@ const Catalog: React.FC = () => {
         <p className="text-lg text-gray-600 mt-3">
           Qualidade e detalhe em cada nó. Clique na peça para ampliar.
         </p>{" "}
-        {/* Mudei a descrição */}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -132,9 +130,7 @@ const Catalog: React.FC = () => {
             key={it.id}
             className="reveal card-shadow bg-white rounded-xl group cursor-pointer border border-gray-100 transition-all duration-300 hover:border-amber-200"
             onClick={() => handleOpenModal(it.img, it.title)}
-            // REMOVIDO: overflow-hidden do article. Ele deve ficar na div da imagem.
           >
-            {/* 1. CONTAINER DA IMAGEM: Apenas aqui deve ter overflow-hidden */}
             <div className="overflow-hidden rounded-t-xl">
               {" "}
               {/* rounded-t-xl para manter a borda do topo arredondada */}
@@ -146,24 +142,22 @@ const Catalog: React.FC = () => {
               />
             </div>
 
-            {/* 2. BLOCO DE TEXTO/BOTÃO: Garante que o conteúdo esteja abaixo da imagem */}
             <div className="p-5 flex flex-col gap-4">
               {" "}
-              {/* Mudei para flex-col para empilhar o texto e o botão */}
               {/* Informações do Produto (Título, Preço, Tamanho) */}
               <div>
                 <h4 className="font-bold text-lg text-gray-900">{it.title}</h4>
-                {/* 1ª LINHA: PREÇO PRINCIPAL */}
+                {/* 1ª linha: preço principal */}
                 <p className="text-base text-amber-700 font-semibold mt-1">
                   {it.price}
                 </p>
 
-                {/* 2ª LINHA: DETALHE DO PREÇO (Fonte menor e cor mais discreta) */}
+                {/* 2ª linha: detalhe do preço (fonte menor e cor mais discreta) */}
                 <p className="text-sm text-gray-500/80 mt-0.5">
                   {it.priceDetails}
                 </p>
 
-                {/* Linha 3 (Tamanho) */}
+                {/* linha 3 (tamanho) */}
                 <p className="text-sm text-gray-500 mt-1">Tamanho: {it.size}</p>
               </div>
               {/* Botão de Contato (no rodapé do bloco de texto) */}
@@ -206,7 +200,7 @@ const Catalog: React.FC = () => {
         ))}
       </div>
 
-      {/* O Modal é renderizado aqui, fora do loop */}
+      {/* O Modal é renderizado */}
       <ImageModal
         isOpen={isModalOpen}
         onClose={handleCloseModal}

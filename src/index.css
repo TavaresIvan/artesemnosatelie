@@ -1,13 +1,12 @@
-/* src/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Paleta de Cores Sofisticada */
+/* Paleta de Cores */
 :root {
   --brand: #2b2b2b; /* Preto/Cinza Escuro para texto principal */
   --muted: #4b5563; /* Cinza para texto secundário */
-  --accent: #b45309; /* Tom de Terra/Ouro Envelhecido (Mais elegante que o anterior) */
+  --accent: #b45309; /* Tom de Terra/Ouro Envelhecido */
   --accent-2: #d6d3d1; /* Cinza Claro Sutil */
 }
 
@@ -20,14 +19,14 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Transição de Revelação (Corrigida) */
+/* Transição de Revelação */
 .reveal {
   opacity: 0;
   transform: translateY(
     24px
-  ); /* Aumentei o deslocamento para ser mais notável */
+  );
   transition: opacity 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    transform 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Curva de animação mais suave */
+    transform 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .reveal.revealed {
   opacity: 1;
@@ -60,7 +59,6 @@ html {
 }
 
 .catalog-img {
-  /* Alterado de 16/11 (quase horizontal) para 3/4 (vertical) */
   aspect-ratio: 3/4;
   object-fit: cover;
   border-radius: 6px;
@@ -72,16 +70,15 @@ html {
 }
 
 @layer components {
-  /* Botão Primário (deve permanecer como está) */
+  /* Botão Primário */
   .btn-primary {
     @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold shadow-xl hover:shadow-2xl transition duration-300;
     background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
     color: white;
   }
 
-  /* Botão Secundário - **AQUI ESTÁ A CORREÇÃO** */
+  /* Botão Secundário */
   .btn-secondary {
-    /* Adicionamos: inline-flex items-center gap-2 para centralizar ícone e texto */
     @apply inline-flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg text-sm text-gray-700 hover:bg-gray-100 transition duration-300;
   }
 }
