@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
           atemporal.
         </p>
         <p className="mt-3">
-          Feito com ❤️ — Entre em contato:{" "}
+          Feito com. ❤️ — Entre em contato:{" "}
           <a
             href="mailto:artesemnosatelie@gmail.com"
             className="underline hover:text-gray-900 transition"
