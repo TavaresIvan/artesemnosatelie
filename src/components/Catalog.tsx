@@ -6,6 +6,7 @@ interface Item {
   id: number;
   title: string;
   price: string;
+  priceDetails: string;
   img: string;
   size: string;
 }
@@ -15,6 +16,7 @@ const ITEMS: Item[] = [
     id: 1,
     title: "Pingente Anjo Branco",
     price: "R$ 40",
+    priceDetails: "",
     img: "/images/anjobranco.jpeg",
     size: "30 cm",
   },
@@ -22,13 +24,15 @@ const ITEMS: Item[] = [
     id: 2,
     title: "Pingente Anjo Mostarda",
     price: "R$ 40",
+    priceDetails: "",
     img: "/images/anjomostarda.jpeg",
     size: "30 cm",
   },
   {
     id: 3,
     title: "Enfeite bola",
-    price: "R$ 15",
+    price: "R$ 5 ~ R$ 15",
+    priceDetails: "Verde: R$ 5, Prata: R$ 15, Desc. duas pratas: R$ 25",
     img: "/images/bolas.jpeg",
     size: "70 mm",
   },
@@ -36,6 +40,7 @@ const ITEMS: Item[] = [
     id: 4,
     title: "Pingente Papai Noel com Gizo",
     price: "R$ 10",
+    priceDetails: "",
     img: "/images/papainoelvermelho.jpeg",
     size: "20 cm",
   },
@@ -43,20 +48,23 @@ const ITEMS: Item[] = [
     id: 5,
     title: "Pingente Papai Noel com Gizo",
     price: "R$ 10",
+    priceDetails: "",
     img: "/images/papainoelmostarda.jpeg",
     size: "20 cm",
   },
   {
     id: 6,
     title: "Pigente bola de macramê",
-    price: "R$ 5 (Amarela)<br /> R$ 6 (Vermelha), R$ 8 (Verde) ",
+    price: "R$ 5 ~ R$ 6 ~ R$ 8",
+    priceDetails: "Amarela: R$ 5, Vermelha: R$ 6, Verde: R$ 8",
     img: "/images/arcos.jpeg",
     size: "8 cm",
   },
   {
     id: 7,
     title: "Pigente bola de macramê",
-    price: "R$ 5",
+    price: "R$ 5 ~ R$ 6 ~ R$ 8",
+    priceDetails: "Amarela: R$ 5, Vermelha: R$ 6, Verde: R$ 8",
     img: "/images/arcos2.jpeg",
     size: "8 cm",
   },
@@ -64,27 +72,31 @@ const ITEMS: Item[] = [
     id: 8,
     title: "Pigente mini árvores",
     price: "R$ 2.50",
+    priceDetails: "Disponível nas cores verde, branco e vermelho",
     img: "/images/enfeitearvore.jpeg",
     size: "15 cm",
   },
   {
     id: 9,
-    title: "Difusores",
-    price: "R$ 2.50",
+    title: "Difusores para carro",
+    price: "R$ 8",
+    priceDetails: "",
     img: "/images/difusores.jpeg",
-    size: "15 cm",
+    size: "20 cm",
   },
   {
     id: 10,
     title: "Colar de mesa",
-    price: "R$ 2.50",
+    price: "R$ 15",
+    priceDetails: "",
     img: "/images/colardemesa.jpeg",
-    size: "15 cm",
+    size: "55 cm",
   },
   {
     id: 11,
-    title: "Colar de mesa",
-    price: "R$ 2.50",
+    title: "Enfeite bola",
+    price: "R$ 15",
+    priceDetails: "Desc. duas: R$ 25",
     img: "/images/bolasespeciais.jpeg",
     size: "15 cm",
   },
@@ -141,9 +153,17 @@ const Catalog: React.FC = () => {
               {/* Informações do Produto (Título, Preço, Tamanho) */}
               <div>
                 <h4 className="font-bold text-lg text-gray-900">{it.title}</h4>
+                {/* 1ª LINHA: PREÇO PRINCIPAL */}
                 <p className="text-base text-amber-700 font-semibold mt-1">
                   {it.price}
                 </p>
+
+                {/* 2ª LINHA: DETALHE DO PREÇO (Fonte menor e cor mais discreta) */}
+                <p className="text-sm text-gray-500/80 mt-0.5">
+                  {it.priceDetails}
+                </p>
+
+                {/* Linha 3 (Tamanho) */}
                 <p className="text-sm text-gray-500 mt-1">Tamanho: {it.size}</p>
               </div>
               {/* Botão de Contato (no rodapé do bloco de texto) */}
