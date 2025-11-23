@@ -33,7 +33,7 @@ const App: React.FC = () => {
       {/* WhatsApp FAB (Flutuante) */}
       <a
         className="whatsapp-fab transition-transform duration-300 hover:scale-105"
-        href={`https://api.whatsapp.com/send?phone=55YOURNUMBER&text=${encodeURIComponent(
+        href={`https://api.whatsapp.com/send?phone=5561998539400&text=${encodeURIComponent(
           "Olá! Vi seu catálogo e quero saber mais sobre as peças."
         )}`}
         target="_blank"

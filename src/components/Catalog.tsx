@@ -170,7 +170,7 @@ const Catalog: React.FC = () => {
               <div className="mt-2">
                 <a
                   className="btn-secondary whitespace-nowrap"
-                  href={`https://api.whatsapp.com/send?phone=55YOURNUMBER&text=${encodeURIComponent(
+                  href={`https://api.whatsapp.com/send?phone=5561998539400&text=${encodeURIComponent(
                     `Olá! Gostaria de mais informações sobre: ${it.title}`
                   )}`}
                   target="_blank"

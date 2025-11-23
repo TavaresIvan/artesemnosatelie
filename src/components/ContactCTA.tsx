@@ -22,7 +22,7 @@ const ContactCTA: React.FC = () => {
         <div className="flex flex-col sm:flex-row items-center gap-4">
           <a
             className="btn-primary text-lg"
-            href={`https://api.whatsapp.com/send?phone=55YOURNUMBER&text=${encodeURIComponent(
+            href={`https://api.whatsapp.com/send?phone=5561998539400&text=${encodeURIComponent(
               "Olá! Vi o catálogo e quero mais informações."
             )}`}
             target="_blank"

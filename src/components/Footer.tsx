@@ -13,10 +13,10 @@ const Footer: React.FC = () => {
         <p className="mt-3">
           Feito com ❤️ — Entre em contato:{" "}
           <a
-            href="mailto:contato@artesernos.com"
+            href="mailto:artesemnosatelie@gmail.com"
             className="underline hover:text-gray-900 transition"
           >
-            contato@artesernos.com
+            artesemnosatelie@gmail.com
           </a>
         </p>
       </div>
