@@ -60,9 +60,10 @@ html {
 }
 
 .catalog-img {
-  aspect-ratio: 16/11; /* Ajustado para um formato levemente mais horizontal */
+  /* Alterado de 16/11 (quase horizontal) para 3/4 (vertical) */
+  aspect-ratio: 3/4;
   object-fit: cover;
-  border-radius: 6px; /* Bordas um pouco menores para manter a sofisticação */
+  border-radius: 6px;
   transition: transform 0.3s ease;
 }
 
