@@ -49,7 +49,7 @@ const ITEMS: Item[] = [
   {
     id: 6,
     title: "Pigente bola de macramê",
-    price: "R$ 5",
+    price: "R$ 5 (Amarela)<br /> R$ 6 (Vermelha), R$ 8 (Verde) ",
     img: "/images/arcos.jpeg",
     size: "8 cm",
   },
@@ -79,6 +79,13 @@ const ITEMS: Item[] = [
     title: "Colar de mesa",
     price: "R$ 2.50",
     img: "/images/colardemesa.jpeg",
+    size: "15 cm",
+  },
+  {
+    id: 11,
+    title: "Colar de mesa",
+    price: "R$ 2.50",
+    img: "/images/bolasespeciais.jpeg",
     size: "15 cm",
   },
 ];
