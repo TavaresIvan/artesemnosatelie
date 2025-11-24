@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import ImageModal from "./ImageModal";
 
+const VITE_BASE_PATH = import.meta.env.BASE_URL;
+
 interface Item {
   id: number;
   title: string;
@@ -16,7 +18,7 @@ const ITEMS: Item[] = [
     title: "Pingente Anjo Branco",
     price: "R$ 40",
     priceDetails: "",
-    img: "/images/anjobranco.jpeg",
+    img: VITE_BASE_PATH + "/images/anjobranco.jpeg",
     size: "30 cm",
   },
   {
@@ -24,7 +26,7 @@ const ITEMS: Item[] = [
     title: "Pingente Anjo Mostarda",
     price: "R$ 40",
     priceDetails: "",
-    img: "/images/anjomostarda.jpeg",
+    img: VITE_BASE_PATH + "/images/anjomostarda.jpeg",
     size: "30 cm",
   },
   {
@@ -32,7 +34,7 @@ const ITEMS: Item[] = [
     title: "Enfeite bola",
     price: "R$ 5 ~ R$ 15",
     priceDetails: "Verde: R$ 5, Prata: R$ 15, Desc. duas pratas: R$ 25",
-    img: "/images/bolas.jpeg",
+    img: VITE_BASE_PATH + "/images/bolas.jpeg",
     size: "70 mm",
   },
   {
@@ -40,7 +42,7 @@ const ITEMS: Item[] = [
     title: "Pingente Papai Noel com Gizo",
     price: "R$ 10",
     priceDetails: "",
-    img: "/images/papainoelvermelho.jpeg",
+    img: VITE_BASE_PATH + "/images/papainoelvermelho.jpeg",
     size: "20 cm",
   },
   {
@@ -48,7 +50,7 @@ const ITEMS: Item[] = [
     title: "Pingente Papai Noel com Gizo",
     price: "R$ 10",
     priceDetails: "",
-    img: "/images/papainoelmostarda.jpeg",
+    img: VITE_BASE_PATH + "/images/papainoelmostarda.jpeg",
     size: "20 cm",
   },
   {
@@ -56,7 +58,7 @@ const ITEMS: Item[] = [
     title: "Pigente bola de macramê",
     price: "R$ 5 ~ R$ 6 ~ R$ 8",
     priceDetails: "Amarela: R$ 5, Vermelha: R$ 6, Verde: R$ 8",
-    img: "/images/arcos.jpeg",
+    img: VITE_BASE_PATH + "/images/arcos.jpeg",
     size: "8 cm",
   },
   {
@@ -64,7 +66,7 @@ const ITEMS: Item[] = [
     title: "Pigente bola de macramê",
     price: "R$ 5 ~ R$ 6 ~ R$ 8",
     priceDetails: "Amarela: R$ 5, Vermelha: R$ 6, Verde: R$ 8",
-    img: "/images/arcos2.jpeg",
+    img: VITE_BASE_PATH + "/images/arcos2.jpeg",
     size: "8 cm",
   },
   {
@@ -72,7 +74,7 @@ const ITEMS: Item[] = [
     title: "Pigente mini árvores",
     price: "R$ 2.50",
     priceDetails: "Disponível nas cores verde, branco e vermelho",
-    img: "/images/enfeitearvore.jpeg",
+    img: VITE_BASE_PATH + "/images/enfeitearvore.jpeg",
     size: "15 cm",
   },
   {
@@ -80,7 +82,7 @@ const ITEMS: Item[] = [
     title: "Difusores para carro",
     price: "R$ 8",
     priceDetails: "",
-    img: "/images/difusores.jpeg",
+    img: VITE_BASE_PATH + "/images/difusores.jpeg",
     size: "20 cm",
   },
   {
@@ -88,7 +90,7 @@ const ITEMS: Item[] = [
     title: "Colar de mesa",
     price: "R$ 15",
     priceDetails: "",
-    img: "/images/colardemesa.jpeg",
+    img: VITE_BASE_PATH + "/images/colardemesa.jpeg",
     size: "55 cm",
   },
   {
@@ -96,7 +98,7 @@ const ITEMS: Item[] = [
     title: "Enfeite bola",
     price: "R$ 15",
     priceDetails: "Desc. duas: R$ 25",
-    img: "/images/bolasespeciais.jpeg",
+    img: VITE_BASE_PATH + "/images/bolasespeciais.jpeg",
     size: "15 cm",
   },
 ];
